@@ -5,13 +5,12 @@ import "../CSS/Overlay.css";
 import { refContext } from "../Context/RefContext";
 import { scrollSectionsdata } from "../Constants";
 import { RiSteering2Fill } from "react-icons/ri";
-import { useLenis } from "lenis/react";
-// import { useLenis } from "lenis/dist/lenis-react";
 
 const OverLay = () => {
   const { OverLayStaticRef, HeroRef } = useContext(refContext);
   const scrollSectionRef = useRef();
   const OverLayScrollRef = useRef();
+  const overtl = useRef();
   useGSAP(() => {
     gsap.to(OverLayScrollRef.current, {
       y: "-100%",
@@ -23,15 +22,68 @@ const OverLay = () => {
         scrub: 0.5,
       },
     });
-  });
-  useLenis(({ velocity, isTouching }) => {
-    if (window.innerWidth > 1024) {
-      const carDataElements = document.querySelectorAll(".car-data");
+    const carDataElements = document.querySelectorAll(".car-data");
 
-      carDataElements.forEach((element) => {
-        element.style.transform = `skewY(${-velocity * 0.4}deg)`;
+    const handleMouseEnter = (element) => {
+      gsap.to(element, {
+        scale: 1.1,
+        duration: 0.5,
       });
-    }
+    };
+
+    const handleMouseLeave = (element) => {
+      gsap.to(element, {
+        scale: 1,
+        duration: 0.5,
+      });
+    };
+
+    carDataElements.forEach((element) => {
+      element.addEventListener("mouseenter", () => handleMouseEnter(element));
+      element.addEventListener("mouseleave", () => handleMouseLeave(element));
+    });
+
+    return () => {
+      carDataElements.forEach((element) => {
+        element.removeEventListener("mouseenter", () =>
+          handleMouseEnter(element),
+        );
+        element.removeEventListener("mouseleave", () =>
+          handleMouseLeave(element),
+        );
+      });
+    };
+  });
+  useGSAP(() => {
+    overtl.current = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: OverLayScrollRef.current,
+          start: "-80% top",
+          // markers: true,
+        },
+      })
+      .from(".car-data", {
+        yPercent: -50,
+        duration: 0.5,
+        opacity: 0,
+      })
+      .from(".decr-b", {
+        yPercent: 20,
+        ease: "power4.out",
+        opacity: 0,
+      })
+      .from(".Video-l", {
+        yPercent: 20,
+        duration: 1,
+        stagger: 0.1,
+        opacity: 0,
+      })
+      .to(".video-clip", {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        duration: 2,
+        ease: "power4.out",
+      });
   });
 
   return (
@@ -85,11 +137,12 @@ const OverLay = () => {
               </div>
               <div className="Video-r">
                 <video
-                  className="h-full w-full overflow-hidden"
+                  className="video-clip h-full w-full overflow-hidden"
                   src="../../Video/Charging.mp4"
                   muted
                   loop
-                  autoPlay={true}
+                  autoPlay
+                  style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
                 />
               </div>
             </div>

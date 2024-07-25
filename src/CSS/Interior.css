@@ -35,6 +35,7 @@
   font-family: Range_M;
   line-height: 1;
   color: rgb(250, 250, 250);
+  text-transform: uppercase;
 }
 
 .interior-content p {
@@ -67,12 +68,12 @@
 
 @media (max-width: 480px) {
   .interior-content h1 {
-    font-size: 4rem;
+    font-size: 2.4rem;
     word-wrap: break-word;
   }
 
   .interior-content p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .comfort {
     position: absolute;

@@ -77,7 +77,7 @@ const HeroHtml = () => {
       })
       .to(".hero-offset", {
         yPercent: -100,
-        duration: 1.5,
+        duration: 2,
       })
       .from(".hero-rover", {
         xPercent: -100,
@@ -86,7 +86,7 @@ const HeroHtml = () => {
       })
       .from(RedefineText.words, {
         xPercent: (x) => (x % 2 === 0 ? 100 : -100),
-        duration: 1,
+        duration: 0.5,
         stagger: 0.1,
         opacity: 0,
       })
@@ -109,7 +109,9 @@ const HeroHtml = () => {
   });
   return (
     <>
-      <div className="hero-offset absolute top-0 z-[10000] h-[100vh] w-[100vw] bg-black"></div>
+      <div className="hero-offset absolute top-0 z-[10000] flex h-[100vh] w-[100vw] items-end justify-center bg-black pb-10 text-xl uppercase text-white">
+        <h1 style={{ fontFamily: "Range_M" }}>Above & Beyond</h1>
+      </div>
       <div className="Hero-top">
         <div className="Hero-right-con">
           <h3 ref={redRef}>
@@ -212,11 +214,11 @@ const Hero = () => {
       window.removeEventListener("mousemove", handleMove);
     };
   });
-  const [fov, setFov] = useState(window.innerWidth >= 768 ? 25 : 40);
+  const [fov, setFov] = useState(window.innerWidth >= 600 ? 25 : 40);
 
   useEffect(() => {
     const handleResize = () => {
-      setFov(window.innerWidth >= 768 ? 25 : 40);
+      setFov(window.innerWidth >= 600 ? 25 : 40);
     };
 
     window.addEventListener("resize", handleResize);
@@ -251,10 +253,7 @@ const Hero = () => {
         </div>
         <HeroHtml />
       </div>
-      <div
-        ref={HeroRef}
-        className="Menu relative z-50 h-[100vh] w-screen"
-      ></div>
+      <div ref={HeroRef} className="Menu 0 relative h-[100vh] w-screen"></div>
     </>
   );
 };
