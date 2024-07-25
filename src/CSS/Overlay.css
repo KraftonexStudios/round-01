@@ -95,6 +95,9 @@
   justify-content: center;
   gap: 4vw;
 }
+.car-data-con:hover {
+  scale: 1.5;
+}
 
 .car-data {
   width: 16rem;

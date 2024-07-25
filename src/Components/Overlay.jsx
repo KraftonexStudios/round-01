@@ -5,6 +5,7 @@ import "../CSS/Overlay.css";
 import { refContext } from "../Context/RefContext";
 import { scrollSectionsdata } from "../Constants";
 import { RiSteering2Fill } from "react-icons/ri";
+import { useLenis } from "lenis/react";
 
 const OverLay = () => {
   const { OverLayStaticRef, HeroRef } = useContext(refContext);
@@ -22,12 +23,17 @@ const OverLay = () => {
       },
     });
   });
+  useLenis(({ velocity }) => {
+    const carDataElements = document.querySelectorAll(".car-data");
+
+    carDataElements.forEach((element) => {
+      element.style.transform = `skewY(${-velocity * 0.4}deg)`;
+    });
+  });
+
   return (
     <>
-      <div
-        ref={OverLayStaticRef}
-        className="overlay-section-con"
-      >
+      <div ref={OverLayStaticRef} className="overlay-section-con">
         <div ref={OverLayScrollRef} className="Overlay-section absolute top-0">
           <div className="Bottom-overlay">
             <section ref={scrollSectionRef} className="car-data-main">
@@ -66,8 +72,8 @@ const OverLay = () => {
                 >
                   Range Rover Electric
                 </span>
-                waiting list for the opportunity to be among the first to place a
-                pre-order in 2024.
+                waiting list for the opportunity to be among the first to place
+                a pre-order in 2024.
               </p>
             </div>
             <div className="Video-btn">

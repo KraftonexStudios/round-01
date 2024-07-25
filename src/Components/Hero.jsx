@@ -242,7 +242,7 @@ const Hero = () => {
               position: [0, 0, -5],
             }}
             frameloop="demand"
-            dpr={1.4}
+            dpr={window.devicePixelRatio}
             shadows
           >
             <ModelComponent />
