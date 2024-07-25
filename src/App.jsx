@@ -18,7 +18,7 @@ function App() {
     };
     const LoaderId = setTimeout(() => {
       setLoader(false);
-    }, 0 * 1000);
+    }, 4 * 1000);
     return () => {
       clearTimeout(LoaderId);
     };

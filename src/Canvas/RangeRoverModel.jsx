@@ -197,7 +197,6 @@ function Models(props) {
       dispose={null}
       onClick={HandleDoor}
       scale={1}
-      onPointerEnter={HandlePointer}
     >
       <group name="Scene">
         <group name="Car_Rig" position={[0, 0, -2.183]}>
