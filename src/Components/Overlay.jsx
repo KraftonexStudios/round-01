@@ -6,6 +6,7 @@ import { refContext } from "../Context/RefContext";
 import { scrollSectionsdata } from "../Constants";
 import { RiSteering2Fill } from "react-icons/ri";
 import { useLenis } from "lenis/react";
+// import { useLenis } from "lenis/dist/lenis-react";
 
 const OverLay = () => {
   const { OverLayStaticRef, HeroRef } = useContext(refContext);
@@ -23,12 +24,14 @@ const OverLay = () => {
       },
     });
   });
-  useLenis(({ velocity }) => {
-    const carDataElements = document.querySelectorAll(".car-data");
+  useLenis(({ velocity, isTouching }) => {
+    if (window.innerWidth > 1024) {
+      const carDataElements = document.querySelectorAll(".car-data");
 
-    carDataElements.forEach((element) => {
-      element.style.transform = `skewY(${-velocity * 0.4}deg)`;
-    });
+      carDataElements.forEach((element) => {
+        element.style.transform = `skewY(${-velocity * 0.4}deg)`;
+      });
+    }
   });
 
   return (
