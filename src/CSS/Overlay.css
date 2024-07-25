@@ -1,0 +1,202 @@
+.overlay-section-con {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  will-change: auto;
+  pointer-events: all;
+}
+.Overlay-section {
+  position: relative;
+  width: 100vw;
+  min-height: 150vh;
+  background-image: linear-gradient(rgb(0, 0, 0), #000000);
+  z-index: 10;
+}
+/* relative z-20 flex h-[100vh] w-[100vw] items-start justify-center */
+.Top-overlay,
+.Bottom-overlay {
+  display: flex;
+  width: 100vw;
+  height: calc(150vh / 2);
+}
+.Top-overlay {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 var(--padding);
+  color: rgb(161, 161, 161);
+  gap: 3vw;
+}
+.decr-b {
+  min-height: fit-content;
+}
+.Video-btn {
+  position: relative;
+  width: 100%;
+  /* background-color: rgb(189, 189, 189); */
+  /* overflow: hidden; */
+  display: flex;
+}
+.Video-l {
+  width: 50%;
+}
+.Video-r {
+  width: 50%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.Top-overlay h1 {
+  padding: 1vw 4vw;
+  /* backdrop-filter: blur(10px); */
+  color: white;
+  font-family: Range_M;
+  border-top-right-radius: 999px;
+  border: 1px solid white;
+  width: fit-content;
+  font-size: 2vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  pointer-events: all;
+}
+.Video-btn video {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.Top-overlay p {
+  font-size: clamp(1.7rem, 3vw, 4rem);
+  line-height: 1.1;
+  font-family: R-Md;
+  height: fit-content;
+}
+
+.Bottom-overlay {
+  /* background: antiquewhite; */
+  overflow: hidden;
+}
+.car-data-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 6vw;
+  /* overflow: hidden; */
+}
+
+.car-data-con {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.car-data {
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  padding: 1vw 0.5vw;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.img-con-data {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-con-data img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.car-data-title {
+  font-family: Range_M;
+}
+.car-data-description {
+  font-family: R-Thin;
+  text-align: center;
+  color: grey;
+}
+
+.introducing-overlay h1 {
+  font-size: 3vw;
+  font-family: Range_M;
+  text-transform: capitalize;
+}
+.introducing-overlay h4 {
+  font-size: 1.5vw;
+  font-family: R-Thin;
+  text-transform: capitalize;
+}
+@media (max-width: 575px) {
+  .Top-overlay {
+    gap: 6vw;
+  }
+  .car-data-con {
+    /* flex-direction: column; */
+    padding: 4vw 0;
+  }
+  .Video-btn {
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+  }
+
+  .Video-l {
+    width: 100%;
+  }
+  .Video-r {
+    margin-top: 4vw;
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .Top-overlay h1 {
+    font-size: 5vw;
+    padding: 0.4rem 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .car-data-con {
+    padding: 4vw 0;
+  }
+  .Video-btn {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+  }
+  .Video-l {
+    width: 100%;
+  }
+  .Video-r {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .car-data-con {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .car-data {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+  }
+  .car-data-description {
+    display: none;
+  }
+}

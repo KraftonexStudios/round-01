@@ -1,0 +1,437 @@
+/* #car-div {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: 100%;
+} */
+/* #Car-bacGradient {
+  position: absolute;
+  width: 50vh;
+  height: 600vh;
+  background: linear-gradient(to bottom, rgb(107, 107, 107), #616161);
+  transform: rotateZ(-30deg);
+  transform-origin: center;
+  left: 50%;
+  top: 0;
+  z-index: 30;
+  color: #3c3c3c;
+} */
+.Horizontal-sec {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  will-change: auto;
+  color: #f3dfc8;
+}
+.horizontal-containerr {
+  position: absolute;
+  display: flex;
+  /* flex-direction: row; */
+  background: #000;
+  width: 400vw;
+  height: 100vh;
+  top: 0;
+  will-change: auto;
+}
+.support {
+  display: none;
+}
+.circle-exterior {
+  position: absolute;
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background: radial-gradient(#000000 50%, rgb(185, 185, 185));
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  top: 20vw;
+  left: 70vw;
+  scale: 1;
+}
+.exterior-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* color: white; */
+}
+.range1-text-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  font-family: Range_M;
+  font-size: 20vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: #f4dfc8; */
+}
+.rangetext {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 2%;
+  z-index: -2;
+  line-height: 1;
+}
+
+.rovertext {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  line-height: 1;
+  filter: drop-shadow(1px 1px 15px rgb(36, 36, 36));
+}
+#car-div {
+  width: 100vw;
+  height: 100vh;
+}
+#car-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(1px 1px 15px rgb(36, 36, 36));
+}
+/* middle view of scroll section ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.side-view-container {
+  position: relative;
+  width: 200vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-view-text1 {
+  position: absolute;
+}
+.side-text-container {
+  z-index: -1;
+  position: absolute;
+  width: 200vw;
+  height: 100vh;
+  /* background-color: #609cc2; */
+  /* opacity: 0.2; */
+  font-family: Range_M;
+  font-size: 20vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.side-text-container h1 {
+  position: absolute;
+  font-size: 4vw;
+  top: 24%;
+  left: 13%;
+}
+.side-view-text1 {
+  display: flex;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vw;
+}
+.Of {
+  position: absolute;
+  right: 21%;
+  top: 60%;
+  transform: translate(0, -50%);
+  -webkit-text-stroke: 2px #3c3c3c;
+  color: transparent;
+}
+.con-range2 {
+  width: 100vw;
+  height: 100vh;
+  /* background: goldenrod; */
+}
+.con-range2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 15px rgb(36, 36, 36));
+}
+
+/* middle view  EEND of scroll section ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.back-view-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back3-text-con {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #609cc2; */
+  /* opacity: 0.2; */
+  font-family: Range_M;
+  font-size: 20vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.new-text {
+  position: absolute;
+  display: flex;
+  top: 0%;
+  left: 0;
+
+  /* transform: translate(-50%, -50%); */
+}
+.era-text {
+  position: absolute;
+  display: flex;
+  bottom: 10%;
+  right: 8%;
+  z-index: 2;
+  filter: drop-shadow(1px 1px 15px rgb(36, 36, 36));
+}
+#car-div3 {
+  width: 100vw;
+  height: 100vh;
+}
+#car-div3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(1px 1px 15px rgb(36, 36, 36));
+}
+/* For devices with a maximum width of 480px (commonly used for smartphones) */
+@media (max-width: 480px) {
+  /* For 1st PAGE Of Horizontal scroll */
+  .range1-text-container {
+    /* background-color: #609cc2; */
+    font-size: 30vw;
+  }
+  .rangetext {
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .rovertext {
+    bottom: 24%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  #car-div img {
+    scale: 1.3;
+  }
+  /* For 2st PAGE Of Horizontal scroll */
+
+  .side-view-text1 {
+    position: absolute;
+  }
+  .side-text-container {
+    font-size: 30vw;
+  }
+  .side-text-container h1 {
+    font-size: 4vw;
+    top: 19%;
+    left: 7%;
+  }
+  .side-view-text1 {
+    top: 30%;
+    font-size: 40vw;
+  }
+  .Of {
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .con-range2 img {
+    scale: 1.8;
+  }
+  /* For 3st PAGE Of Horizontal scroll */
+
+  .back3-text-con {
+    font-size: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+  }
+  .new-text {
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .era-text {
+    bottom: 20%;
+    right: 8%;
+  }
+  #car-div3 img {
+    scale: 1.1;
+  }
+}
+
+/* For devices with max width of 768px */
+@media (min-width: 480px) and (max-width: 768px) {
+  /* For 1st PAGE Of Horizontal scroll */
+
+  .range1-text-container {
+    font-size: 30vw;
+  }
+  .rangetext {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .rovertext {
+    bottom: 14%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  #car-div img {
+    scale: 1.2;
+  }
+  /* For 2st PAGE Of Horizontal scroll */
+
+  .side-view-text1 {
+    position: absolute;
+  }
+  .side-text-container {
+    font-size: 25vw;
+  }
+  .side-text-container h1 {
+    font-size: 4vw;
+    top: 19%;
+    left: 10%;
+  }
+  .side-view-text1 {
+    top: 30%;
+    font-size: 32vw;
+  }
+  .Of {
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .con-range2 img {
+    scale: 1.6;
+  }
+  /* For 3st PAGE Of Horizontal scroll */
+  .back3-text-con {
+    font-size: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+  }
+  .new-text {
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .era-text {
+    bottom: 10%;
+    right: 10%;
+  }
+  #car-div3 img {
+    scale: 1;
+  }
+}
+
+/* For devices with min width of 769px and max width of 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .range1-text-container {
+    /* background-color: #609cc2; */
+    font-size: 25vw;
+  }
+  .rangetext {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .rovertext {
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  #car-div img {
+    scale: 1;
+  }
+  /* For 2st PAGE Of Horizontal scroll */
+
+  .side-view-text1 {
+    position: absolute;
+  }
+  .side-text-container {
+    font-size: 25vw;
+  }
+  .side-text-container h1 {
+    font-size: 4vw;
+    top: 19%;
+    left: 10%;
+  }
+  .side-view-text1 {
+    top: 20%;
+    font-size: 32vw;
+  }
+  .Of {
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .con-range2 img {
+    scale: 1.6;
+  }
+  /* For 3st PAGE Of Horizontal scroll */
+  .back3-text-con {
+    font-size: 30vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+  }
+  .new-text {
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .era-text {
+    bottom: 10%;
+    right: 20%;
+  }
+  #car-div3 img {
+    scale: 0.9;
+  }
+}
+
+/* For devices with min width of 1025px */
+/* @media (max-width: 1024px) {
+  .Horizontal-sec {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 100vw;
+    height: 400vh;
+  }
+  .horizontal-containerr {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* background: transparent; */
+/* width: 100vw;
+    height: 400vh;
+    top: 0;
+    will-change: auto;
+  }
+  .support {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+}  */

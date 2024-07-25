@@ -1,0 +1,341 @@
+.screenshot-button {
+  position: absolute;
+  bottom: 8rem;
+  right: 10vw;
+  padding: 1rem 3rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border: 1px solid white;
+  font-family: Range_M;
+  border-top-left-radius: 999px;
+  overflow: hidden;
+}
+
+.screenshot-button:hover {
+  background-color: #4545453c;
+}
+
+.editor-con {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  pointer-events: none;
+}
+
+.editor-left-con {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2vw;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(47, 47, 47, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: Range_M;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: all;
+  gap: 0.3rem;
+}
+
+.img-con {
+  aspect-ratio: 1/1;
+  width: 5rem;
+  background: rgba(153, 205, 50, 0.154);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.img-con img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editor-right-con {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.editor-right-con.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filter-con {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: fit-content;
+  padding: 2vw;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  mix-blend-mode: difference;
+  pointer-events: all;
+  gap: 0.3rem;
+  font-family: R-Thin;
+}
+
+.filter h4 {
+  mix-blend-mode: difference;
+}
+
+.img-con2 {
+  aspect-ratio: 1/1;
+  width: 5rem;
+
+  background: rgba(95, 95, 95, 0.148);
+}
+
+.button-con {
+  display: flex;
+  gap: 2vw;
+}
+
+.button-con button {
+  font-family: Range_M;
+  padding: 1vw 1vw;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.specification-con {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.l-speci {
+  width: 10vw;
+  height: 100vh;
+  padding: 5rem 0.5vw;
+}
+
+.l-speci h4 {
+  font-family: Range_M;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: fit-content;
+  pointer-events: all;
+}
+
+.m-speci {
+  width: 40vw;
+  height: 100vh;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.r-speci {
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  mix-blend-mode: color-dodge;
+}
+
+.speci {
+  font-family: Range_M;
+  margin-top: 14rem;
+  font-size: 3vw;
+  border-bottom: 1px solid white;
+}
+
+.r-speci h1 {
+  font-family: Range_M;
+  font-size: 2.5vw;
+}
+
+.speci-c {
+  display: flex;
+  gap: 1vw;
+  font-family: R-M;
+  border-bottom: 1px solid white;
+  padding-bottom: 1vw;
+  font-size: 1rem;
+}
+
+.speci-s {
+  display: flex;
+  gap: 1vw;
+  font-family: R-M;
+  padding-bottom: 1vw;
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .speci {
+    margin-top: 14rem;
+    font-size: 1.3rem;
+  }
+
+  .r-speci h1 {
+    font-size: 1.2rem;
+  }
+
+  .speci-c {
+    gap: 1vw;
+    padding-bottom: 1vw;
+    font-size: 1rem;
+  }
+
+  .speci-s {
+    gap: 1vw;
+    padding-bottom: 1vw;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .m-speci h1 {
+    font-size: 1.4rem;
+  }
+  .img-con {
+    aspect-ratio: 1/1;
+    width: 4rem;
+    background: rgba(153, 205, 50, 0.154);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .img-con2 {
+    aspect-ratio: 1/1;
+    width: 4rem;
+    background: rgba(95, 95, 95, 0.148);
+  }
+
+  .filter-con {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+    padding: 4vw 1vw;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+  }
+  .action-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 4vw 1vw;
+    border-radius: 0.5rem;
+  }
+
+  .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: all;
+    gap: 0.3rem;
+  }
+  .screenshot-button {
+    position: absolute;
+    bottom: 8rem;
+    right: 5vw;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .m-speci h1 {
+    font-size: 1.2rem;
+  }
+  .img-con {
+    aspect-ratio: 1/1;
+    width: 2.5rem;
+  }
+  .img-con2 {
+    aspect-ratio: 1/1;
+    width: 2.5rem;
+    background: rgba(95, 95, 95, 0.148);
+  }
+  .specification-con {
+    justify-content: space-around;
+  }
+  .speci {
+    font-family: Range_M;
+    margin-top: 29rem;
+    font-size: 3vw;
+    border-bottom: 1px solid white;
+  }
+  .screenshot-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 5vw;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .r-speci h1 {
+    font-family: Range_M;
+    font-size: 2.5vw;
+  }
+
+  .speci-c {
+    display: flex;
+    gap: 0.5vw;
+    font-size: 0.5rem;
+  }
+
+  .speci-s {
+    font-size: 0.5rem;
+  }
+}

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "R-Thin";
+  src: url("../Fonts/AvenirNextW01-Regular.woff");
+}
+@font-face {
+  font-family: "R-M";
+  src: url("../Fonts/AvenirNextW01-Demi.woff");
+}
+@font-face {
+  font-family: "R-Md";
+  src: url("../Fonts/AvenirNextW01-Medium.woff");
+}
+@font-face {
+  font-family: "Range_M";
+  src: url("../Fonts/LandRoverWeb-Bold.woff");
+}
+
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --Primary-Red: #d40007;
+  --Secondry-Red: #480000fd;
+  --Grey-Color: #393e46;
+  --Dark-Color: #7ab3fd;
+  background-color: #000000;
+  --padding: 6vw;
+  position: relative;
+}
+html, body {
+  position: relative;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.pin-spacer {
+  pointer-events: none !important;
+}
