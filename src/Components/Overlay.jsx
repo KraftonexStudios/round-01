@@ -122,7 +122,7 @@ const OverLay = () => {
               <p>
                 Lead by example. Join the
                 <span
-                  style={{ fontFamily: "Range_M" }}
+                  style={{ fontFamily: "Range_M", textTransform: "uppercase" }}
                   className="px-2 text-zinc-200"
                 >
                   Range Rover Electric
