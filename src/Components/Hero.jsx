@@ -171,7 +171,6 @@ const Hero = () => {
   const CanvasRef = useRef();
   const pointerCircleRef = useRef();
   const { HeroRef } = useContext(refContext);
-  const isHighEndDevice = navigator.deviceMemory && navigator.deviceMemory > 4;
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(
     (context, contextSafe) => {
@@ -215,7 +214,6 @@ const Hero = () => {
     };
   });
   const [fov, setFov] = useState(window.innerWidth >= 600 ? 25 : 40);
-
   useEffect(() => {
     const handleResize = () => {
       setFov(window.innerWidth >= 600 ? 25 : 40);
@@ -244,7 +242,7 @@ const Hero = () => {
               position: [0, 0, -5],
             }}
             frameloop="demand"
-            dpr={isHighEndDevice ? window.devicePixelRatio : 1}
+            dpr={window.devicePixelRatio}
             shadows
           >
             <ModelComponent />

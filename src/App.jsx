@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/HOME/Home";
-import Build from "./Pages/BUILD/Build";
 import Navbar from "./Components/Navbar";
 import { useProgress } from "@react-three/drei";
 import gsap from "gsap";
@@ -33,7 +32,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/build" element={<Build />} />
           </Routes>
         </>
       )}
