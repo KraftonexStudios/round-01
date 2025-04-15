@@ -215,7 +215,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer__bottom">
-        <p>&copy; 2024 Range Rover. All Rights Reserved.</p>
+        <p>&copy; 2025 Range Rover. All Rights Reserved.</p>
       </div>
     </footer>
   );
